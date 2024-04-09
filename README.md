@@ -17,3 +17,23 @@ Similarly, to run the tests, you can use the following command:
 ```bash
 deno test <file_name>.ts
 ```
+
+### 🇨 `C++`
+
+To run and test the `C++` code, I'm using `g++` compiler:
+
+```bash
+g++ <file_name>.cpp -o <file_name>.bin
+```
+
+After compiling the code, you can run the binary file:
+
+```bash
+./<file_name>.bin
+```
+
+You can compile and run the code using the following one-liner:
+
+```bash
+g++ <file_name>.cpp -o <file_name>.bin && ./<file_name>.bin
+```
