@@ -25,12 +25,3 @@ public:
     return {-1, -1};
   }
 };
-
-int main()
-{
-  Solution s;
-  vector<int> t = {5, 25, 75};
-  vector<int> res = s.twoSum(t, 100);
-  cout << res[0] << " " << res[1] << endl;
-  return 0;
-}

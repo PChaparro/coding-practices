@@ -30,13 +30,4 @@ public:
 
     return maxAreaSoFar;
   }
-};
-
-int main()
-{
-  Solution s;
-  vector<int> test = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-  cout << s.maxArea(test) << endl;
-
-  return 0;
 }
