@@ -24,5 +24,3 @@ export function createChristmasTree(ornaments: string, height: number): string {
   const trunk = `${trunkPadding}|\n`;
   return [...leaves, trunk].join("\n");
 }
-
-createChristmasTree("123", 4);
