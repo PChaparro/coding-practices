@@ -36,7 +36,7 @@ public:
     int nodesCount = n;
     queue<int> leafs;
 
-    uset<int> seen;
+    vector<bool> seen(n);
 
     for (auto it = neighbors.begin(); it != neighbors.end(); it++)
     {
@@ -45,7 +45,7 @@ public:
       if (neighborsCount[it->first] == 1)
       {
         leafs.push(it->first);
-        seen.insert(it->first);
+        seen[it->first] = true;
       }
     }
 
@@ -64,11 +64,11 @@ public:
         {
           neighborsCount[neighbor]--;
 
-          if (neighborsCount[neighbor] <= 1 &&
-              seen.find(neighbor) == seen.end())
+          if (!seen[neighbor] &&
+              neighborsCount[neighbor] <= 1)
           {
             leafs.push(neighbor);
-            seen.insert(neighbor);
+            seen[neighbor] = true;
           }
         }
 
